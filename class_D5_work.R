@@ -67,7 +67,7 @@ mult= c(2,4,6.8,"rosy","sixer",FALSE,TRUE,3L,5L,6L)
 typeof(mult)
 length(mult)
 class(mult)
-str(mult)
+str(mult)      #structure
 
 
 # adding elemts in a vector
@@ -97,4 +97,97 @@ ser3
 ser1 == ser2
 ser1 == ser3
 
-# Missing Data
+# Missing Data as NA
+ x= c(0.2,NA,0.6)
+x
+x1= c(FALSE,TRUE,NA,TRUE,NA)
+x1
+
+#is.na(x)  used for find NA in list as NA=TRUE & value=False ( FALSE  TRUE FALSE)
+
+#anyNA(x) used for find any NA values  TRUE/FALSE   
+
+#  anyNA(x1)       "T/F"
+#  is.na(x1)        "T F T T F F F"
+
+y1=c(25,NA,56,NA,39,NA,NA,62)
+y1
+anyNA(y1)
+is.na(y1)
+
+#special values in R
+1/0     #inf
+-1/0     #-inf
+0/0      #NaN
+
+
+##List     for objects
+
+# list containing strings, numbers, vectors and a logical values
+
+#list_data =list ("pH", "EC", "TDS", 7,8,8,TRUE,FALSE)
+#list_data
+
+list_data =list ("pH", "EC", "TDS", 7,8,8,TRUE,FALSE)
+list_data
+
+list_data1 =list ("pH", "EC", "TDS", c(2,5,6),7,8,8,TRUE,FALSE)
+list_data1
+
+list_data1[(4)]
+
+list_data1[4]      #2 5 6
+list_data1[7]      #8
+
+list_data1[length(list_data1)]
+list1= list(1,2,3,4,5,6,7,8,9,10)
+list1[8]        #8
+list1 [8] = 80
+list1
+list2= list(10:30)
+list2
+#multiple list
+list5= list(20,30,40,50)
+list6= list("pH", "EC", "EH","TDS")
+list7 =list(1:4)
+
+# mergging list  
+#merged.list
+merged.list= c(list5,list6,list7)
+merged.list
+
+
+merged.list=c(list7,list6,list5)
+merged.list
+
+is.na(merged.list)
+typeof(merged.list)
+str(merged.list)
+
+
+# Convert lists to vectors_
+#v1 = unlist(list)
+
+v1= unlist(list5)
+v2= unlist(list6)
+v1
+v2
+
+length(v1)
+typeof(v1)
+str(v1)
+class(v1)
+
+#adding vectors
+v3=unlist(list(1:4))
+add= v1+v3         #adition
+add
+
+sub=v1-v3
+sub                #substraction
+
+mult=v1*v3
+mult                #multilication
+
+div=v1/v3           #diivision
+div
